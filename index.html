@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PlaceMeantForYou</title>
+    <link href="./assets/images/P.jpg" rel="shortcut icon">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/ui-bootstrap4/dist/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="./node_modules/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+</head>
+
+<body ng-app="pfy-imran">
+
+    <div  ui-view></div>
+
+    <!-- angular/jQuery/Bootstarp/DataTable/toaster -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="./node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="./node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="./node_modules/toastr/build/toastr.min.js"></script>
+
+    <!-- modules/configs/directives -->
+    <script src="./apps/app.module.js"></script>
+    <script src="./apps/app.config.js"></script>
+    <script src="./apps/app.route.js"></script>
+    <script src="./apps/common config/constants.js"></script>
+
+    <!-- Components -->
+    <!-- login -->
+    <script src="./apps/components/login/loginController.js"></script>
+    <script src="./apps/components/login/loginFactory.js"></script>
+
+    <!-- layout -->
+    <script src="./apps/components/layout/layoutController.js"></script>
+
+    <!-- dashboard -->
+    <script src="./apps/components/dashboard/dashboardController.js"></script>
+</body>
+
+</html>

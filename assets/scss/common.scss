@@ -1,0 +1,49 @@
+$white : #d5d4d4;
+$black : #000000;
+
+.cursor-point {
+    cursor: pointer;
+}
+
+body {
+    font: 14px Garamond;
+    font-family: 'segoe ui', sans-serif;
+    font-weight: 600;
+    color: #41494f;
+    background: #7f91d7;
+
+}
+
+.body-wrapper {
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    background-color: #bbc8fb;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6) !important
+}
+
+// custom scroll bar
+#scroll-bar-custom::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #b9c2fa;
+    border-radius: 10px;
+}
+
+#scroll-bar-custom::-webkit-scrollbar {
+    width: 10px;
+    background-color: #b9c2fa;
+}
+
+#scroll-bar-custom::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+        left bottom,
+        left top,
+        
+        color-stop(0.86, #1C213F));
+        // color-stop(0.44, #bbc8fb),
+        // color-stop(0.72, #7f91d7),
+}

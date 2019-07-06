@@ -1,0 +1,221 @@
+<div id="dashboard" class="body-wrapper shadow-lg p-3 mb-5 rounded">
+    <div uib-carousel active="0" interval="4000">
+        <div uib-slide index="0">
+            <img class="d-block w-100" src="../../../assets/images/3.jpg" alt="First slide" height="500px">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>We would love to</h2>
+                <h1 class="upper-class"> <strong> see you succeed </strong></h1>
+                <p>"Success is going from failure to failure without losing your enthusiasm." -Winston Churchill</p>
+            </div>
+        </div>
+        <div uib-slide index="1">
+            <img class="d-block w-100" src="../../../assets/images/2.jpg" alt="Second slide" height="500px">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Our services are to give an.</h2>
+                <h1 class="upper-class"> <strong> amazing experience </strong></h1>
+                <p>"We gain strength, and courage, and confidence by each experience in which we really stop to look
+                    fear in the face. We must do that which we think we cannot." ~ Eleanor Roosevelt.</p>
+            </div>
+        </div>
+        <div uib-slide index="2">
+            <img class="d-block w-100" src="../../../assets/images/1.jpg" alt="First slide" height="500px">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>We are the top level</h2>
+                <h1 class="upper-class"> <strong> strategy providers </strong></h1>
+                <p>"The Ladder of success is never crowded at the top"-Napoleon Hill.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-none d-xl-block col-xl-2 bd-toc">
+        <ul class="section-nav">
+            <li class="toc-entry toc-h2"><a href="#approach">Approach</a></li>
+            <li class="toc-entry toc-h2"><a href="#page-defaults">Page defaults</a></li>
+            <li class="toc-entry toc-h2"><a href="#native-font-stack">Native font stack</a></li>
+            <li class="toc-entry toc-h2"><a href="#headings-and-paragraphs">Headings and paragraphs</a></li>
+            <li class="toc-entry toc-h2"><a href="#lists">Lists</a></li>
+            <li class="toc-entry toc-h2"><a href="#preformatted-text">Preformatted text</a></li>
+            <li class="toc-entry toc-h2"><a href="#tables">Tables</a></li>
+            <li class="toc-entry toc-h2"><a href="#forms">Forms</a></li>
+            <li class="toc-entry toc-h2"><a href="#misc-elements">Misc elements</a>
+                <ul>
+                    <li class="toc-entry toc-h3"><a href="#address">Address</a></li>
+                    <li class="toc-entry toc-h3"><a href="#blockquote">Blockquote</a></li>
+                    <li class="toc-entry toc-h3"><a href="#inline-elements">Inline elements</a></li>
+                    <li class="toc-entry toc-h3"><a href="#summary">Summary</a></li>
+                </ul>
+            </li>
+            <li class="toc-entry toc-h2"><a href="#html5-hidden-attribute">HTML5 [hidden] attribute</a></li>
+        </ul>
+    </div>
+
+
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+        <h1 class="bd-title" id="content">Reboot</h1>
+        <p class="bd-lead">Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to
+            provide an elegant, consistent, and simple baseline to build upon.</p>
+        <script async src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&placement=getbootstrapcom"
+            id="_carbonads_js"></script>
+
+        <h2 id="approach">Approach</h2>
+
+        <p>Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only
+            element
+            selectors. Additional styling is done only with classes. For example, we reboot some <code
+                class="highlighter-rouge">&lt;table&gt;</code> styles for a simpler baseline and later provide <code
+                class="highlighter-rouge">.table</code>, <code class="highlighter-rouge">.table-bordered</code>, and
+            more.
+        </p>
+
+        <p>Here are our guidelines and reasons for choosing what to override in Reboot:</p>
+
+        <ul>
+            <li>Update some browser default values to use <code class="highlighter-rouge">rem</code>s instead of <code
+                    class="highlighter-rouge">em</code>s for scalable component spacing.</li>
+            <li>Avoid <code class="highlighter-rouge">margin-top</code>. Vertical margins can collapse, yielding
+                unexpected
+                results. More importantly though, a single direction of <code class="highlighter-rouge">margin</code> is
+                a
+                simpler mental model.</li>
+            <li>For easier scaling across device sizes, block elements should use <code
+                    class="highlighter-rouge">rem</code>s for <code class="highlighter-rouge">margin</code>s.</li>
+            <li>Keep declarations of <code class="highlighter-rouge">font</code>-related properties to a minimum, using
+                <code class="highlighter-rouge">inherit</code> whenever possible.</li>
+        </ul>
+
+        <h2 id="page-defaults">Page defaults</h2>
+
+        <p>The <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> and <code
+                class="highlighter-rouge">&lt;body&gt;</code> elements are updated to provide better page-wide defaults.
+            More specifically:</p>
+
+        <ul>
+            <li>The <code class="highlighter-rouge">box-sizing</code> is globally set on every element—including <code
+                    class="highlighter-rouge">*::before</code> and <code class="highlighter-rouge">*::after</code>, to
+                <code class="highlighter-rouge">border-box</code>. This ensures that the declared width of element is
+                never
+                exceeded due to padding or border.
+                <ul>
+                    <li>No base <code class="highlighter-rouge">font-size</code> is declared on the <code
+                            class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code>, but <code
+                            class="highlighter-rouge">16px</code> is assumed (the browser default). <code
+                            class="highlighter-rouge">font-size: 1rem</code> is applied on the <code
+                            class="highlighter-rouge">&lt;body&gt;</code> for easy responsive type-scaling via media
+                        queries
+                        while respecting user preferences and ensuring a more accessible approach.</li>
+                </ul>
+            </li>
+            <li>The <code class="highlighter-rouge">&lt;body&gt;</code> also sets a global <code
+                    class="highlighter-rouge">font-family</code>, <code class="highlighter-rouge">line-height</code>,
+                and
+                <code class="highlighter-rouge">text-align</code>. This is inherited later by some form elements to
+                prevent
+                font inconsistencies.</li>
+            <li>For safety, the <code class="highlighter-rouge">&lt;body&gt;</code> has a declared <code
+                    class="highlighter-rouge">background-color</code>, defaulting to <code
+                    class="highlighter-rouge">#fff</code>.</li>
+        </ul>
+
+        <h2 id="native-font-stack">Native font stack</h2>
+
+        <p>The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in Bootstrap 4 and replaced
+            with a
+            “native font stack” for optimum text rendering on every device and OS. Read more about <a
+                href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/">native font
+                stacks in
+                this <em>Smashing Magazine</em> article</a>.</p>
+
+        <figure class="highlight">
+            <pre><code class="language-sass" data-lang="sass"><span class="nv">$font-family-sans-serif</span><span class="p">:</span>
+    <span class="c1">// Safari for OS X and iOS (San Francisco)</span>
+    <span class="nt">-apple-system</span><span class="o">,</span>
+    <span class="c1">// Chrome &lt; 56 for OS X (San Francisco)</span>
+    <span class="nt">BlinkMacSystemFont</span><span class="o">,</span>
+    <span class="c1">// Windows</span>
+    <span class="s2">"Segoe UI"</span><span class="o">,</span>
+    <span class="c1">// Android</span>
+    <span class="s2">"Roboto"</span><span class="o">,</span>
+    <span class="c1">// Basic web fallback</span>
+    <span class="s2">"Helvetica Neue"</span><span class="o">,</span> <span class="nt">Arial</span><span class="o">,</span> <span class="nt">sans-serif</span><span class="o">,</span>
+    <span class="c1">// Emoji fonts</span>
+    <span class="s2">"Apple Color Emoji"</span><span class="o">,</span> <span class="s2">"Segoe UI Emoji"</span><span class="o">,</span> <span class="s2">"Segoe UI Symbol"</span> <span class="o">!</span><span class="nt">default</span><span class="o">;</span></code></pre>
+        </figure>
+
+        <p>This <code class="highlighter-rouge">font-family</code> is applied to the <code
+                class="highlighter-rouge">&lt;body&gt;</code> and automatically inherited globally throughout Bootstrap.
+            To
+            switch the global <code class="highlighter-rouge">font-family</code>, update <code
+                class="highlighter-rouge">$font-family-base</code> and recompile Bootstrap.</p>
+
+        <h2 id="headings-and-paragraphs">Headings and paragraphs</h2>
+
+        <p>All heading elements—e.g., <code class="highlighter-rouge">&lt;h1&gt;</code>—and <code
+                class="highlighter-rouge">&lt;p&gt;</code> are reset to have their <code
+                class="highlighter-rouge">margin-top</code> removed. Headings have <code
+                class="highlighter-rouge">margin-bottom: .5rem</code> added and paragraphs <code
+                class="highlighter-rouge">margin-bottom: 1rem</code> for easy spacing.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Heading</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code></p>
+
+                    </td>
+                    <td><span class="h1">h1. Bootstrap heading</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><code class="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code></p>
+
+                    </td>
+                    <td><span class="h2">h2. Bootstrap heading</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><code class="highlighter-rouge">&lt;h3&gt;&lt;/h3&gt;</code></p>
+
+                    </td>
+                    <td><span class="h3">h3. Bootstrap heading</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><code class="highlighter-rouge">&lt;h4&gt;&lt;/h4&gt;</code></p>
+
+                    </td>
+                    <td><span class="h4">h4. Bootstrap heading</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><code class="highlighter-rouge">&lt;h5&gt;&lt;/h5&gt;</code></p>
+
+                    </td>
+                    <td><span class="h5">h5. Bootstrap heading</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><code class="highlighter-rouge">&lt;h6&gt;&lt;/h6&gt;</code></p>
+
+                    </td>
+                    <td><span class="h6">h6. Bootstrap heading</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="lists">Lists</h2>
+
+        <p>All lists—<code class="highlighter-rouge">&lt;ul&gt;</code>, <code
+                class="highlighter-rouge">&lt;ol&gt;</code>,
+            and <code class="highlighter-rouge">&lt;dl&gt;</code>—have their <code
+                class="highlighter-rouge">margin-top</code> removed and a <code
+                class="highlighter-rouge">margin-bottom: 1rem</code>. Nested lists have no <code
+                class="highlighter-rouge">margin-bottom</code>.</p>
+    </div>
+</div>

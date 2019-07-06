@@ -1,0 +1,52 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand">
+            <img src="../../../assets/images/logo.png" alt="" width="70%">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" ng-class="{ 'active' : activeTab=='home' }">
+                    <a class="nav-link" ui-sref="main.dashboard()">HOME
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item" ng-class="{ 'active' : activeTab=='companies' }">
+                    <a class="nav-link" ui-sref="main.dashboard()">COMPANIES</a>
+                </li>
+                <li class="nav-item" ng-class="{ 'active' : activeTab=='documents' }">
+                    <a class="nav-link" ui-sref="main.dashboard()">DOCUMENTS</a>
+                </li>
+                <li class="nav-item" ng-class="{ 'active' : activeTab=='applystudies' }">
+                    <a class="nav-link" ui-sref="main.dashboard()">APPLY FOR HIGHER STUDIES</a>
+                </li>
+                <li class="nav-item" ng-class="{ 'active' : activeTab=='about' }">
+                    <a class="nav-link" ui-sref="main.dashboard()">ABOUT US</a>
+                </li>
+                <li class="nav-item" ng-class="{ 'active' : activeTab=='contact' }">
+                    <a class="nav-link" ui-sref="main.dashboard()">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a ng-if="$root.isLoggedIn" class="nav-link cursor-point" ng-click="logout()">LOGOUT</a>
+                    <a ng-if="!$root.isLoggedIn" class="nav-link" ui-sref="login()">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="body-panel" id="scroll-bar-custom">
+
+    <div ui-view></div>
+</div>
+<!-- fotter -->
+<div class="footer">
+    <div class="p-2 text-center">
+        <p class="m-0">© copyright <a ui-sref="main.dashboard()">Place Meant For You</a> All rights reserved.</p>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "placemeantforyou",
+  "version": "1.0.0",
+  "description": "PlacMeant Mock ups, walkthrough by Muhammed Imran",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "node-sass --watch --include-path scss ./assets/scss/main.scss   ./assets/css/main.css --output-style compressed"
+  },
+  "author": "Imadullah Sharief",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-animate": "^1.7.8",
+    "angular-sanitize": "^1.7.8",
+    "angular-ui-router": "^1.0.22",
+    "bootstrap": "^4.3.1",
+    "datatables.net": "^1.10.19",
+    "jquery": "^3.4.1",
+    "toastr": "^2.1.4",
+    "ui-bootstrap4": "^3.0.6"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

@@ -1,0 +1,50 @@
+%bg-dark,
+.bg-dark {
+    background-color: #1C213F !important;
+}
+
+%active-primary {
+    color: #fd1414 !important;
+}
+
+.navbar {
+    position: inherit;
+    &-nav {
+        font-size: 85% !important;
+
+        .active {
+            .nav-link {
+                @extend %active-primary;
+            }
+        }
+
+        .nav-link {
+            color: $white !important;
+        }
+
+        .nav-item {
+            &:hover {
+                .nav-link {
+                    @extend %active-primary;
+                }
+            }
+        }
+    }
+}
+
+.body-panel {
+    width: calc(100%);
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+}
+
+.footer {
+    @extend %bg-dark;
+    color: $white;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        font-weight: 900;
+    }
+}
