@@ -42,8 +42,38 @@ body {
     background-image: -webkit-gradient(linear,
         left bottom,
         left top,
-        
+
         color-stop(0.86, #1C213F));
-        // color-stop(0.44, #bbc8fb),
-        // color-stop(0.72, #7f91d7),
+    // color-stop(0.44, #bbc8fb),
+    // color-stop(0.72, #7f91d7),
+}
+
+.page-section {
+    margin-top: 20px;
+    background-color: #b6b4f0;
+    border-radius: 3rem !important;
+    padding: 30px;
+
+    &-header {
+        color: #fd1414;
+        margin-top: 10px;
+
+        h2 {
+            padding-right: 40px;
+            padding-left: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid;
+            border-radius: 14%;
+            letter-spacing: 3px;
+        }
+    }
+
+    &-paragraph {
+        text-align: center;
+    }
+}
+
+.fa-large {
+    font-size: 7em;
+    margin: 1rem !important;
 }
