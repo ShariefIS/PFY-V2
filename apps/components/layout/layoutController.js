@@ -8,7 +8,6 @@
     LayoutController.$inject = ['$scope', '$state'];
     function LayoutController($scope, $state) {
         var vm = this;
-        $scope.activeTab = "home";
         $scope.logout = () => {
             toastr.success("You have been Logged out");
             $state.go("login");

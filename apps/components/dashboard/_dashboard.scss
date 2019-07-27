@@ -8,11 +8,21 @@
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
             border-radius: 1rem !important;
 
-            .far,
-            .fas {
-                animation: fa-spin 1s infinite steps(8);
-            }
+            // .far,
+            // .fas {
+            //     animation: fa-spin 1s infinite steps(8);
+            // }
 
         }
+    }
+
+    .parallax {
+        background-image: url("../../../assets/images/paral.jpg");
+        height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 36px;
     }
 }
