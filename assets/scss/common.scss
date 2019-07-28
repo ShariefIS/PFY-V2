@@ -52,6 +52,7 @@ body {
 
 .page-section {
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #b6b4f0;
     border-radius: 3rem !important;
     padding: 30px;
@@ -67,6 +68,7 @@ body {
             border-bottom: 2px solid;
             border-radius: 14%;
             letter-spacing: 3px;
+            text-transform: uppercase;
         }
     }
 
@@ -78,4 +80,8 @@ body {
 .fa-large {
     font-size: 7em;
     margin: 1rem !important;
+}
+
+.carousel-control-prev,.carousel-control-next{
+    display: none;
 }
