@@ -1,4 +1,12 @@
-@import "./common.scss";
+$white : #d5d4d4;
+$black : #000000;
+$theme-dark:#1C213F;
+$theme-light:#7f91d7;
+$theme-lighter:#bbc8fb;
+@import "./common";
+@import "./buttons";
 @import "../../apps/components/dashboard/dashboard";
+@import "../../apps/components/about/about";
+@import "../../apps/components/contact/contact";
 @import "../../apps/components/layout/layout";
 @import "../../apps/components/login/login";

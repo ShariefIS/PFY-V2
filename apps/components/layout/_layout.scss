@@ -1,6 +1,6 @@
 %bg-dark,
 .bg-dark {
-    background-color: #1C213F !important;
+    background-color: $theme-dark !important;
 }
 
 %active-primary {
@@ -9,6 +9,7 @@
 
 .navbar {
     position: inherit;
+
     &-nav {
         font-size: 85% !important;
 

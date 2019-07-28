@@ -18,7 +18,7 @@
         ////////////////
 
         function activate() {
-            $state.go("main.dashboard");
+            $state.go("main.contact");
         }
     }
 })();

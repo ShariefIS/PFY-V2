@@ -10,25 +10,25 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" ng-class="{ 'active' : activeTab=='home' }">
+                <li class="nav-item" ng-class="{ 'active' : $root.activeTab=='home' }">
                     <a class="nav-link" ui-sref="main.dashboard()">HOME
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item" ng-class="{ 'active' : activeTab=='companies' }">
+                <li class="nav-item" ng-class="{ 'active' : $root.activeTab=='companies' }">
                     <a class="nav-link" ui-sref="main.dashboard()">COMPANIES</a>
                 </li>
-                <li class="nav-item" ng-class="{ 'active' : activeTab=='documents' }">
+                <li class="nav-item" ng-class="{ 'active' : $root.activeTab=='documents' }">
                     <a class="nav-link" ui-sref="main.dashboard()">DOCUMENTS</a>
                 </li>
-                <li class="nav-item" ng-class="{ 'active' : activeTab=='applystudies' }">
+                <li class="nav-item" ng-class="{ 'active' : $root.activeTab=='applystudies' }">
                     <a class="nav-link" ui-sref="main.dashboard()">APPLY FOR HIGHER STUDIES</a>
                 </li>
-                <li class="nav-item" ng-class="{ 'active' : activeTab=='about' }">
-                    <a class="nav-link" ui-sref="main.dashboard()">ABOUT US</a>
+                <li class="nav-item" ng-class="{ 'active' : $root.activeTab=='about' }">
+                    <a class="nav-link" ui-sref="main.about()">ABOUT US</a>
                 </li>
-                <li class="nav-item" ng-class="{ 'active' : activeTab=='contact' }">
-                    <a class="nav-link" ui-sref="main.dashboard()">CONTACT</a>
+                <li class="nav-item" ng-class="{ 'active' : $root.activeTab=='contact' }">
+                    <a class="nav-link" ui-sref="main.contact()">CONTACT</a>
                 </li>
                 <li class="nav-item">
                     <a ng-if="$root.isLoggedIn" class="nav-link cursor-point" ng-click="logout()">LOGOUT</a>
