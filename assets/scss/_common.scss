@@ -1,85 +1,84 @@
 .cursor-point {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 body {
-    font: 14px Garamond;
-    font-family: 'segoe ui', sans-serif;
-    font-weight: 600;
-    color: #41494f;
-    background: $theme-light;
-
+  font: 14px Garamond;
+  font-family: "segoe ui", sans-serif;
+  font-weight: 600;
+  color: #41494f;
+  background: $theme-light;
 }
 
 .body-wrapper {
-    margin: 10px;
-    padding: 10px;
-    position: relative;
-    background-color: $theme-lighter;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  background-color: $theme-lighter;
 }
 
 .shadow-lg {
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6) !important
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6) !important;
 }
 
 // custom scroll bar
 #scroll-bar-custom::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px $black;
-    background-color: $theme-lighter;
-    border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px $black;
+  background-color: $theme-lighter;
+  border-radius: 10px;
 }
 
 #scroll-bar-custom::-webkit-scrollbar {
-    width: 10px;
-    background-color: $theme-lighter;
+  width: 10px;
+  background-color: $theme-lighter;
 }
 
 #scroll-bar-custom::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-image: -webkit-gradient(linear,
-            left bottom,
-            left top,
-
-            color-stop(0.86, #1C213F));
-    // color-stop(0.44, #bbc8fb),
-    // color-stop(0.72, #7f91d7),
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.86, #1c213f));
+  // color-stop(0.44, #bbc8fb),
+  // color-stop(0.72, #7f91d7),
 }
 
 // custom scroll bar end
 
 .page-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #b6b4f0;
-    border-radius: 3rem !important;
-    padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #b6b4f0;
+  border-radius: 3rem !important;
+  padding: 30px;
 
-    &-header {
-        color: #fd1414;
-        margin-top: 10px;
+  &-header {
+    color: #fd1414;
+    margin-top: 10px;
 
-        h2 {
-            padding-right: 40px;
-            padding-left: 40px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid;
-            border-radius: 14%;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
+    h2 {
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid;
+      border-radius: 14%;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
+  }
 
-    &-paragraph {
-        text-align: center;
-    }
+  &-paragraph {
+    text-align: center;
+  }
 }
 
 .fa-large {
-    font-size: 7em;
-    margin: 1rem !important;
+  font-size: 7em;
+  margin: 1rem !important;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    display: none;
+  display: none;
+}
+
+.iniital-loader {
+  @include absCenter;
 }

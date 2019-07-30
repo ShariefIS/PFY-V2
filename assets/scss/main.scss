@@ -1,8 +1,9 @@
-$white : #d5d4d4;
-$black : #000000;
-$theme-dark:#1C213F;
-$theme-light:#7f91d7;
-$theme-lighter:#bbc8fb;
+$white: #d5d4d4;
+$black: #000000;
+$theme-dark: #1c213f;
+$theme-light: #7f91d7;
+$theme-lighter: #bbc8fb;
+@import "./mixins";
 @import "./common";
 @import "./buttons";
 @import "../../apps/components/dashboard/dashboard";
