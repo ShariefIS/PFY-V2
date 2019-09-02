@@ -1,0 +1,20 @@
+#login-page {
+    position: relative;
+    height: 100vh;
+    background-image: url("../../../assets/images/p_m2.jpg");
+    background-size: cover;
+    overflow: auto;
+
+    .wrapper {
+        position: relative;
+        top: 10%;
+        width: 50%;
+
+        div:first-child {
+            background-image: url("../../../assets/images/p_m.jpg");
+            background-size: cover;
+            height: calc(100vh-500px);
+        }
+
+    }
+}

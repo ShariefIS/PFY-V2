@@ -5,7 +5,7 @@
         .module('pfy-imran')
         .controller('ContactController', ContactController);
 
-    ContactController.$inject = ['$scope', '$rootScope'];
+    /** @ngInject */
     function ContactController($scope, $rootScope) {
         var vm = this;
         $rootScope.activeTab = "contact";

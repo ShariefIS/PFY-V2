@@ -5,7 +5,7 @@
         .module('pfy-imran')
         .controller('AboutUsController', AboutUsController);
 
-    AboutUsController.$inject = ['$scope', '$rootScope'];
+    /** @ngInject */
     function AboutUsController($scope, $rootScope) {
         var vm = this;
         $rootScope.activeTab = "about";

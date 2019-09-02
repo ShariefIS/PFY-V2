@@ -5,7 +5,7 @@
         .module('pfy-imran')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$scope', '$rootScope', '$state'];
+    /** @ngInject */
     function LoginController($scope, $rootScope, $state) {
         var vm = this;
 
@@ -14,7 +14,6 @@
 
         ////////////////
 
-        function activate() {
-        }
+        function activate() { }
     }
 })();

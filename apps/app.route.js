@@ -34,6 +34,6 @@
                     templateUrl: './apps/components/about/about.html',
                     controller: 'AboutUsController'
                 });
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('/dashboard');
         });
 })();
