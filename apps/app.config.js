@@ -33,20 +33,14 @@
         }
         // Before transition is started
         $transitions.onStart({}, function (trans) {
-            let userDetails = ls.get('transportalUserDetails');
-            // If user is not logged in, redirect to login page
-            if (userDetails == "" && trans.to().name !== "login") {
-                toastr.warning("You must login to continue.");
-                $state.go("login");
-            }
-
-            // If access to one time setup
-            if (!userDetails.isOrganizationSetup && trans.to().name == "organizationSetup") {
-                // toastr.warning("You don't have this previlage");
-                trans.abort();
-                if (trans.from().name == "") {
-                    $state.go("main.dashboard");
-                }
+            // let userDetails = ls.get('transportalUserDetails');
+            // // If user is not logged in, redirect to login page
+            // if (userDetails == "" && trans.to().name !== "login") {
+            //     toastr.warning("You must login to continue.");
+            //     $state.go("login");
+            // }
+            if (trans.to().name == "main") {
+                $state.go("main.dashboard");
             }
         });
     }

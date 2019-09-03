@@ -5,7 +5,7 @@
         .module('pfy-imran')
         .controller('LayoutController', LayoutController);
 
-    LayoutController.$inject = ['$scope', '$state'];
+    /** @ngInject */
     function LayoutController($scope, $state) {
         var vm = this;
         $scope.logout = () => {
@@ -18,7 +18,7 @@
         ////////////////
 
         function activate() {
-            $state.go("main.contact");
+            
         }
     }
 })();
