@@ -1,5 +1,9 @@
 .btn {
-    &-success {
-        background-color: $theme-dark !important;
+  &-success {
+    background-color: $theme-dark !important;
+    border-color: $theme-dark !important;
+    &:focus {
+      box-shadow: 0 0 0 0.2rem$theme-dark !important;
     }
+  }
 }

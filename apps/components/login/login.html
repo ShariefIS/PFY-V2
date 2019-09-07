@@ -2,13 +2,49 @@
 
 <!-- <button ui-sref="main()">Home</button> -->
 <div id="login-page">
-    <div class="wrapper mx-auto my-auto">
-        <div class="col-md-12">
-            <h4>Welcome to PlaceMeant For You.</h4>
+    <div class="wrapper mx-auto">
+        <div class="wrap-top d-flex align-items-center ">
+            <div class="flex-column p-5">
+                <p>Welcome to PlaceMeant For You.</p>
+                <p> Tips and Tricks provided by Mr. Mohammed Imran for all graduating students to help crack interviews
+                    and
+                    get placed in reputed companies.</p>
+            </div>
         </div>
-        <div class="col-md-12">
-            https://www.behance.net/gallery/78562531/login-form
-            https://codepen.io/suez/pen/dPqxoM
+        <a class="create-account">Create Account</a>
+        <div class="flex-column wrap-bottom d-flex align-items-center ">
+
+            <h4>Login</h4>
+            <form name="loginForm" ng-submit="login()">
+                <div class="form-group form-user">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter UserName">
+                </div>
+                <div class="form-group form-pass">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Enter Password">
+                </div>
+                <div class="form-group d-flex justify-content-between">
+                    <div class="form-check pl-0">
+                        <div class="custom-control custom-checkbox mr-sm-2">
+                            <input type="checkbox" ng-model="rememberMe" class="custom-control-input"
+                                id="customControlAutosizing">
+                            <label class="custom-control-label" for="customControlAutosizing">
+                                Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <a href ng-click="activePage = 'forgotPassword'" class="text-dark">
+                        Forgot Password ?
+                    </a>
+                </div>
+                <div class="text-center">
+                    <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-success">
+                        <span>LOGIN </span><i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                    
+                </div>
+            </form>
         </div>
     </div>
 </div>

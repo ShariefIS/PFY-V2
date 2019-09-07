@@ -1,20 +1,164 @@
 #login-page {
-    position: relative;
-    height: 100vh;
-    background-image: url("../../../assets/images/p_m2.jpg");
-    background-size: cover;
-    overflow: auto;
-
+  position: relative;
+  height: 100vh;
+  background-image: url("../../../assets/images/p_m2.jpg");
+  background-size: cover;
+  overflow: auto;
+  @include respond(phone) {
     .wrapper {
-        position: relative;
-        top: 10%;
-        width: 50%;
-
-        div:first-child {
-            background-image: url("../../../assets/images/p_m.jpg");
-            background-size: cover;
-            height: calc(100vh-500px);
+      top: 0 !important;
+      width: 100% !important;
+      .wrap-top {
+        border-radius: 0 !important;
+        height: 50vh !important;
+      }
+      .wrap-bottom {
+        border-radius: 0 !important;
+        height: 50vh !important;
+        form {
+          width: 77% !important;
         }
-
+      }
     }
+  }
+  @include respond(tab-land) {
+    .wrap-bottom {
+      form {
+        width: 77% !important;
+      }
+    }
+  }
+  @include respond(big-desktop) {
+    .wrap-bottom {
+      padding-top: 6px !important;
+    }
+  }
+  .wrapper {
+    position: relative;
+    top: 10%;
+    width: 50%;
+    .create-account {
+      cursor: pointer;
+      text-decoration: none;
+      position: absolute;
+      margin-top: -35px;
+      left: 20px;
+      color: $white;
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .wrap-top {
+      background-image: url("../../../assets/images/p_m.jpg");
+      background-size: cover;
+      border-radius: 5% 5% 0 0;
+      height: 43vh;
+      font-weight: 200;
+      color: $white;
+      p:first-child {
+        font-size: 24px;
+        // margin-bottom: 0;
+      }
+    }
+    .wrap-bottom {
+      border-radius: 0 0 5% 5%;
+      height: 35vh;
+      font-weight: 200;
+      background: white;
+      color: $black;
+      padding-top: 3%;
+      h4 {
+        color: #6d4586;
+        text-transform: uppercase;
+        padding-bottom: 2%;
+      }
+      form {
+        width: 50%;
+      }
+      a.text-dark {
+        padding-bottom: 5px;
+        padding-left: 25px;
+        text-decoration: none;
+        &:hover {
+          color: #6d4586 !important;
+          font-weight: 600;
+        }
+      }
+
+      .text-center {
+        button {
+          width: 55%;
+        }
+      }
+      input:focus {
+        box-shadow: none;
+      }
+      .form-control {
+        height: 30px;
+        border: none;
+        background: transparent;
+        font-size: 13px;
+        font-weight: 600;
+        color: $black;
+      }
+      .form-group {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        /* flex-flow: row wrap; */
+        -ms-flex-align: center;
+        align-items: center;
+        .fa {
+          color: white;
+        }
+        margin-bottom: 7px !important;
+      }
+      .custom-checkbox .custom-control-label::before {
+        border-radius: 50%;
+      }
+      .custom-control-input:checked ~ .custom-control-label::before,
+      .custom-control-input:checked ~ .custom-control-label ::after {
+        color: #fff;
+        border-color: #dda7ba;
+        background-color: #dda7ba;
+        border-radius: 50%;
+      }
+      .form-user,
+      .form-pass {
+        padding-left: 10px;
+        border-radius: 50rem !important;
+        ::placeholder {
+          color: whitesmoke;
+          padding-left: 15px;
+          font-weight: 200;
+        }
+        background-image: linear-gradient(-90deg, #352d68, #dc97aa);
+      }
+      .btn {
+        transition: all 0.5s;
+      }
+
+      .btn span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .btn i {
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .btn:hover span {
+        padding-right: 25px;
+      }
+
+      .btn:hover i {
+        opacity: 1;
+        right: 0;
+      }
+    }
+  }
 }
