@@ -1,3 +1,15 @@
+%wrap-tops {
+  transition: height 1s linear;
+  background-image: url("../../../assets/images/p_m.jpg");
+  border-radius: 5% 5% 0 0;
+  font-weight: 200;
+  color: $white;
+  p:first-child {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+}
+
 #login-page {
   position: relative;
   height: 100vh;
@@ -48,20 +60,26 @@
       font-size: 16px;
     }
     .wrap-top {
-      background-image: url("../../../assets/images/p_m.jpg");
       background-size: cover;
-      border-radius: 5% 5% 0 0;
       height: 43vh;
-      font-weight: 200;
-      color: $white;
-      p:first-child {
-        font-size: 24px;
-        // margin-bottom: 0;
+      @extend %wrap-tops;
+      &-signUp {
+        background-size: 785px 280px;
+        height: 23vh;
+        @extend %wrap-tops;
       }
     }
     .wrap-bottom {
+      transition: height 1s linear;
+      @include heightVH(36vh);
+      &-signUp {
+        transition: height 1s linear;
+        @include heightVH(60vh);
+      }
+    }
+    .wrap-bottom,
+    .wrap-bottom-signUp {
       border-radius: 0 0 5% 5%;
-      height: 35vh;
       font-weight: 200;
       background: white;
       color: $black;

@@ -3,19 +3,26 @@
 <!-- <button ui-sref="main()">Home</button> -->
 <div id="login-page">
     <div class="wrapper mx-auto">
-        <div class="wrap-top d-flex align-items-center ">
-            <div class="flex-column p-5">
+        <div
+            ng-class="[{'wrap-top':isLogin} ,{'wrap-top-signUp': !isLogin}, {'flex-column':!isLogin} ,'d-flex' ,'align-items-center']">
+            <div ng-class="[{'d-none':!isLogin},'p-5','flex-column']">
                 <p>Welcome to PlaceMeant For You.</p>
                 <p> Tips and Tricks provided by Mr. Mohammed Imran for all graduating students to help crack interviews
                     and
                     get placed in reputed companies.</p>
             </div>
+            <div ng-class="[{'d-none':isLogin},'p-5']">
+                <p>Hi there</p>
+                <p>Let's have your account Created.</p>
+            </div>
         </div>
-        <a class="create-account">Create Account</a>
-        <div class="flex-column wrap-bottom d-flex align-items-center ">
+        <a class="create-account" ng-show="isLogin" ng-click="isLogin = false;">Create Account</a>
+        <a class="create-account" ng-show="!isLogin" ng-click="isLogin = true;">Log In</a>
+        <div ng-class="['flex-column', 'd-flex', 'align-items-center',
+         { 'wrap-bottom': isLogin}, {'wrap-bottom-signUp':!isLogin }]">
 
-            <h4>Login</h4>
-            <form name="loginForm" ng-submit="login()">
+            <h4 ng-class="[{'d-none':!isLogin}]">Login</h4>
+            <form name="loginForm" ng-submit="login()" ng-class="[{'d-none':!isLogin}]">
                 <div class="form-group form-user">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter UserName">
@@ -41,10 +48,31 @@
                 </div>
                 <div class="text-center">
                     <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-success">
-                        <span>LOGIN </span><i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
-                    
+                        <span>LOGIN &nbsp;</span><i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+
                 </div>
             </form>
+
+
+            <h4 ng-class="[{'d-none':isLogin}]">Sign Up</h4>
+            <form name="loginForm" ng-submit="signUp()" ng-class="[{'d-none':isLogin}]">
+                <div class="form-group form-user">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter UserName">
+                </div>
+                <div class="form-group form-pass">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Enter Password">
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-success">
+                        <span>SIGNUP &nbsp;</span><i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+
+                </div>
+            </form>
+
         </div>
     </div>
 </div>

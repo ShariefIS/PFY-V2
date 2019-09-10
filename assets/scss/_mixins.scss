@@ -4,7 +4,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+@mixin heightVH($property) {
+  height: $property;
+}
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

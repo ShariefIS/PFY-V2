@@ -8,7 +8,7 @@
     /** @ngInject */
     function LoginController($scope, $rootScope, $state) {
         var vm = this;
-
+        $scope.isLogin = true;
         $rootScope.isLoggedIn = true;
         activate();
 
