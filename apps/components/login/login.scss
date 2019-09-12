@@ -1,15 +1,3 @@
-%wrap-tops {
-  transition: height 1s linear;
-  background-image: url("../../../assets/images/p_m.jpg");
-  border-radius: 5% 5% 0 0;
-  font-weight: 200;
-  color: $white;
-  p:first-child {
-    font-size: 24px;
-    margin-bottom: 6px;
-  }
-}
-
 #login-page {
   position: relative;
   height: 100vh;
@@ -20,29 +8,64 @@
     .wrapper {
       top: 0 !important;
       width: 100% !important;
-      .wrap-top {
-        border-radius: 0 !important;
-        height: 50vh !important;
-      }
+      .wrap-top,
       .wrap-bottom {
         border-radius: 0 !important;
         height: 50vh !important;
+      }
+      .wrap-top-signUp,
+      .wrap-bottom-signUp {
+        border-radius: 0 !important;
+      }
+      .wrap-bottom-signUp {
+        height: 77vh !important;
+        overflow: scroll !important;
+      }
+      .wrap-bottom,
+      .wrap-bottom-signUp {
         form {
           width: 77% !important;
         }
       }
     }
   }
+  @include respond(only-tab-land) {
+    .wrapper {
+      width: 70% !important;
+    }
+  }
   @include respond(tab-land) {
-    .wrap-bottom {
-      form {
-        width: 77% !important;
+    .wrap {
+      &-bottom {
+        form {
+          width: 77% !important;
+        }
+      }
+      &-bottom-signUp {
+        form {
+          width: 90% !important;
+        }
       }
     }
   }
   @include respond(big-desktop) {
     .wrap-bottom {
       padding-top: 6px !important;
+    }
+    .wrap-top-signUp {
+      background-size: cover!important;
+      height: auto!important;
+    }
+  }
+  %wrap-tops {
+    transition: height 1s linear;
+    background-image: url("../../../assets/images/p_m.jpg");
+    border-radius: 5% 5% 0 0;
+    font-weight: 200;
+    color: $white;
+    p:first-child {
+      font-size: 24px;
+      margin-bottom: 6px;
     }
   }
   .wrapper {
@@ -69,12 +92,20 @@
         @extend %wrap-tops;
       }
     }
+
     .wrap-bottom {
       transition: height 1s linear;
-      @include heightVH(36vh);
+      form {
+        width: 50%;
+      }
+      height: 36vh;
       &-signUp {
+        form {
+          width: 80%;
+        }
+        overflow: hidden;
         transition: height 1s linear;
-        @include heightVH(60vh);
+        height: 60vh;
       }
     }
     .wrap-bottom,
@@ -88,9 +119,6 @@
         color: #6d4586;
         text-transform: uppercase;
         padding-bottom: 2%;
-      }
-      form {
-        width: 50%;
       }
       a.text-dark {
         padding-bottom: 5px;
@@ -107,29 +135,50 @@
           width: 55%;
         }
       }
+
+      // <custom form styles>
       input:focus {
         box-shadow: none;
       }
-      .form-control {
-        height: 30px;
-        border: none;
-        background: transparent;
-        font-size: 13px;
-        font-weight: 600;
-        color: $black;
-      }
-      .form-group {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-flow: row wrap;
-        /* flex-flow: row wrap; */
-        -ms-flex-align: center;
-        align-items: center;
-        .fa {
-          color: white;
+      .form {
+        &-row {
+          padding: 5px;
         }
-        margin-bottom: 7px !important;
+        &-control {
+          height: 30px;
+          border: none;
+          background: transparent;
+          font-size: 13px;
+          font-weight: 600;
+          color: $black;
+        }
+        &-group {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-flow: row wrap;
+          /* flex-flow: row wrap; */
+          -ms-flex-align: center;
+          align-items: center;
+          .fa {
+            color: white;
+          }
+          margin-bottom: 7px !important;
+        }
+        &-custom-style {
+          padding-left: 10px;
+          border-radius: 50rem !important;
+          ::placeholder {
+            color: whitesmoke;
+            padding-left: 15px;
+            font-weight: 200;
+          }
+          background-image: linear-gradient(-90deg, #352d68, #dc97aa);
+        }
       }
+
+      // </custom form styles>
+
+      // <custom CheckBox>
       .custom-checkbox .custom-control-label::before {
         border-radius: 50%;
       }
@@ -140,43 +189,29 @@
         background-color: #dda7ba;
         border-radius: 50%;
       }
-      .form-user,
-      .form-pass {
-        padding-left: 10px;
-        border-radius: 50rem !important;
-        ::placeholder {
-          color: whitesmoke;
-          padding-left: 15px;
-          font-weight: 200;
-        }
-        background-image: linear-gradient(-90deg, #352d68, #dc97aa);
-      }
-      .btn {
-        transition: all 0.5s;
-      }
+      // </custom CheckBox>
 
+      // <Login-SignUp Animation>
       .btn span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
       }
-
       .btn i {
         opacity: 0;
         top: 0;
         right: -20px;
         transition: 0.5s;
       }
-
       .btn:hover span {
         padding-right: 25px;
       }
-
       .btn:hover i {
         opacity: 1;
         right: 0;
       }
+      // </ Login-SignUp Animation>
     }
   }
 }

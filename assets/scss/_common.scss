@@ -82,3 +82,7 @@ body {
 .iniital-loader {
   @include absCenter;
 }
+
+.disable-cursor {
+  cursor: not-allowed !important;
+}

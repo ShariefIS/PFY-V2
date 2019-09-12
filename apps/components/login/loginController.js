@@ -9,6 +9,7 @@
     function LoginController($scope, $rootScope, $state) {
         var vm = this;
         $scope.isLogin = true;
+        $scope.matchError = false;
         $rootScope.isLoggedIn = true;
         activate();
 

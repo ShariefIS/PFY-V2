@@ -23,13 +23,14 @@
 
             <h4 ng-class="[{'d-none':!isLogin}]">Login</h4>
             <form name="loginForm" ng-submit="login()" ng-class="[{'d-none':!isLogin}]">
-                <div class="form-group form-user">
+                <div class="form-group form-custom-style">
                     <i class="fa fa-user" aria-hidden="true"></i>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter UserName">
+                    <input required type="text" class="form-control" id="formGroupExampleInput"
+                        placeholder="Enter UserName">
                 </div>
-                <div class="form-group form-pass">
+                <div class="form-group form-custom-style">
                     <i class="fa fa-lock" aria-hidden="true"></i>
-                    <input type="password" class="form-control" id="formGroupExampleInput2"
+                    <input required type="password" class="form-control" id="formGroupExampleInput2"
                         placeholder="Enter Password">
                 </div>
                 <div class="form-group d-flex justify-content-between">
@@ -47,28 +48,106 @@
                     </a>
                 </div>
                 <div class="text-center">
-                    <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-success">
-                        <span>LOGIN &nbsp;</span><i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                    <button type="submit" ng-disabled="loginForm.$invalid"
+                        ng-class="['btn', 'btn-success',{'disable-cursor':loginForm.$invalid}]">
+                        <span ng-class="{'disable-cursor':loginForm.$invalid}">LOGIN &nbsp;</span><i class=" fa
+                            fa-arrow-right" aria-hidden="true"></i> </button>
 
                 </div>
             </form>
 
 
             <h4 ng-class="[{'d-none':isLogin}]">Sign Up</h4>
-            <form name="loginForm" ng-submit="signUp()" ng-class="[{'d-none':isLogin}]">
-                <div class="form-group form-user">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter UserName">
+            <form name="signUpForm" ng-submit="signUp()" ng-class="[{'d-none':isLogin}]">
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <strong>&nbsp;Full Name:</strong>
+                    </div>
+
+                    <div class="form-group col-md-4 form-custom-style">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input required type="text" class="form-control" id="GroupExampleInput"
+                            placeholder="Enter Full Name">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <strong>&nbsp;UserName:</strong>
+                    </div>
+
+                    <div class="form-group col-md-4 form-custom-style">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input required type="text" class="form-control" id="GroupExampleInput12"
+                            placeholder="Enter UserName">
+                    </div>
+
                 </div>
-                <div class="form-group form-pass">
-                    <i class="fa fa-lock" aria-hidden="true"></i>
-                    <input type="password" class="form-control" id="formGroupExampleInput2"
-                        placeholder="Enter Password">
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <strong>&nbsp;Password:</strong>
+                    </div>
+                    <div class="form-group col-md-4 form-custom-style">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input required type="password" class="form-control" id="GroupExampleInput2"
+                            placeholder="Enter Password" maxlength="15" ng-model="newPassword"
+                            ng-keyup="matchError = !(newPassword == confirmNewPassword)"></div>
+                    <div class="form-group col-md-2">
+                        <strong>&nbsp;Confirm Password:</strong>
+                    </div>
+                    <div class="form-group col-md-4 form-custom-style">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        <input required type="password" class="form-control" id="GroupExampleInput21"
+                            ng-model="confirmNewPassword" ng-keyup="matchError = !(newPassword == confirmNewPassword)"
+                            required placeholder="Confirm Password">
+                    </div>
+                    <div class="text-danger mx-auto mt-1 mb-2" ng-show="matchError">This field should match the
+                        new password field</div>
+
                 </div>
-                
-                <div class="text-center">
-                    <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-success">
-                        <span>SIGNUP &nbsp;</span><i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <strong>&nbsp;Emali:</strong>
+                    </div>
+                    <div class="form-group col-md-4 form-custom-style">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <input required type="eamil" class="form-control" id="ExampleInput" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <strong>&nbsp;Roll Number:</strong>
+                    </div>
+                    <div class="form-group col-md-4 form-custom-style">
+                        <i class="fa fa-hashtag" aria-hidden="true"></i>
+                        <input required type="text" class="form-control" id="ExampleInput2"
+                            placeholder="Enter Roll Number">
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <strong>&nbsp;Contact:</strong>
+                    </div>
+                    <div class="form-group col-md-4 form-custom-style">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input required type="text" class="form-control" id="GroupInput"
+                            placeholder="Enter Phone Number">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <strong>&nbsp;Department:</strong>
+                    </div>
+                    <div class="form-group col-md-4 form-custom-style">
+                        <i class="fa fa-building-o" aria-hidden="true"></i>
+                        <select id="inputState" class="form-control">
+                            <option disabled value="">Select Department</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="text-center mt-2">
+                    <button type="submit" ng-disabled="signUpForm.$invalid"
+                        ng-class="['btn', 'btn-success',{'disable-cursor':signUpForm.$invalid}]">
+                        <span ng-class="[{'disable-cursor':signUpForm.$invalid}]">SIGNUP &nbsp;</span><i
+                            class="fa fa-arrow-right" aria-hidden="true"></i> </button>
 
                 </div>
             </form>
